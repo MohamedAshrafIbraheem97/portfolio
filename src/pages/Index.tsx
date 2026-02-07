@@ -17,7 +17,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main>
+      <main role="main" aria-label="Portfolio content">
         <Hero />
         <About />
         <Skills />

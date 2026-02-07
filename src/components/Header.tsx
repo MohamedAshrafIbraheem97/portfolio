@@ -45,7 +45,7 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -73,7 +73,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-background border-b border-border">
+        <nav className="md:hidden bg-background border-b border-border" aria-label="Mobile navigation">
           <div className="container px-4 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a

@@ -128,4 +128,9 @@
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
+
+  /* Skip link - hidden until focused for keyboard/screen reader users */
+  .skip-link {
+    @apply absolute left-4 top-4 z-[100] -translate-y-16 px-4 py-2 rounded-md bg-accent text-accent-foreground font-medium transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  }
 }
