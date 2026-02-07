@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { FaBars, FaTimes } from "react-icons/fa";
 const navLinks = [
   {
     label: "About",
@@ -64,9 +64,9 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="w-5 h-5" />
+            <FaTimes className="w-5 h-5" />
           ) : (
-            <Menu className="w-5 h-5" />
+            <FaBars className="w-5 h-5" />
           )}
         </button>
       </div>

@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from "lucide-react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
@@ -79,7 +79,7 @@ const Projects = () => {
                   className="text-muted-foreground hover:text-accent transition-colors flex-shrink-0"
                   aria-label={`View ${project.title} on GitHub`}
                 >
-                  <Github className="w-5 h-5" />
+                  <FaGithub className="w-5 h-5" />
                 </a>
               </div>
 
@@ -123,7 +123,7 @@ const Projects = () => {
             className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
           >
             <span>View all repositories on GitHub</span>
-            <ExternalLink className="w-4 h-4" />
+            <FaExternalLinkAlt className="w-4 h-4" />
           </a>
         </div>
       </div>

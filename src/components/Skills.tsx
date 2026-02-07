@@ -1,22 +1,23 @@
-import { 
-  SiAngular, 
-  SiTypescript, 
-  SiJavascript, 
-  SiHtml5, 
-  SiCss3, 
+import {
+  SiAngular,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
   SiSass,
   SiTailwindcss,
   SiBootstrap,
   SiGit,
   SiGithub,
-  SiReactivex
+  SiReactivex,
 } from "react-icons/si";
-import { Code2, Layout, Workflow, Wrench } from "lucide-react";
+import { FaCode, FaThLarge, FaSitemap, FaWrench } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
 
 const skillGroups = [
   {
     title: "Core Fundamentals",
-    icon: Code2,
+    icon: FaCode,
     skills: [
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
@@ -27,9 +28,9 @@ const skillGroups = [
   },
   {
     title: "Frameworks & Libraries",
-    icon: Layout,
+    icon: FaThLarge,
     skills: [
-      { name: "Angular (latest)", icon: SiAngular, color: "#DD0031" },
+      { name: "Angular", icon: SiAngular, color: "#DD0031" },
       { name: "RxJS", icon: SiReactivex, color: "#B7178C" },
       { name: "NgRx", icon: SiAngular, color: "#BA2BD2" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
@@ -50,7 +51,7 @@ const skillGroups = [
   },
   {
     title: "Architecture & Patterns",
-    icon: Workflow,
+    icon: FaSitemap,
     skills: [
       { name: "Feature-based Structure" },
       { name: "Component Composition" },
@@ -61,11 +62,11 @@ const skillGroups = [
   },
   {
     title: "Tools & Workflow",
-    icon: Wrench,
+    icon: FaWrench,
     skills: [
       { name: "Git", icon: SiGit, color: "#F05032" },
       { name: "GitHub", icon: SiGithub, color: "#ffffff" },
-      { name: "VS Code" },
+      { name: "VS Code", icon: VscVscode, color: "#007ACC" },
       { name: "Chrome DevTools" },
       { name: "Responsive Design" },
     ],
@@ -77,7 +78,7 @@ const Skills = () => {
     <section id="skills" className="py-24 px-4 bg-surface">
       <div className="container max-w-3xl">
         <h2 className="text-2xl md:text-3xl font-semibold mb-12">Skills</h2>
-        
+
         <div className="space-y-10">
           {skillGroups.map((group) => {
             const GroupIcon = group.icon;
@@ -93,7 +94,12 @@ const Skills = () => {
                       key={skill.name}
                       className="px-3 py-1.5 text-sm bg-secondary rounded-md text-foreground flex items-center gap-2"
                     >
-                      {skill.icon && <skill.icon className="w-4 h-4" style={{ color: skill.color }} />}
+                      {skill.icon && (
+                        <skill.icon
+                          className="w-4 h-4"
+                          style={{ color: skill.color }}
+                        />
+                      )}
                       {skill.name}
                     </span>
                   ))}
