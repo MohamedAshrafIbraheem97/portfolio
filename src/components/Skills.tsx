@@ -18,22 +18,22 @@ const skillGroups = [
     title: "Core Fundamentals",
     icon: Code2,
     skills: [
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "HTML5", icon: SiHtml5 },
-      { name: "CSS3", icon: SiCss3 },
-      { name: "SCSS", icon: SiSass },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+      { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+      { name: "SCSS", icon: SiSass, color: "#CC6699" },
     ],
   },
   {
     title: "Frameworks & Libraries",
     icon: Layout,
     skills: [
-      { name: "Angular (latest)", icon: SiAngular },
-      { name: "RxJS", icon: SiReactivex },
-      { name: "NgRx", icon: SiAngular },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Bootstrap", icon: SiBootstrap },
+      { name: "Angular (latest)", icon: SiAngular, color: "#DD0031" },
+      { name: "RxJS", icon: SiReactivex, color: "#B7178C" },
+      { name: "NgRx", icon: SiAngular, color: "#BA2BD2" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
     ],
   },
   {
@@ -63,8 +63,8 @@ const skillGroups = [
     title: "Tools & Workflow",
     icon: Wrench,
     skills: [
-      { name: "Git", icon: SiGit },
-      { name: "GitHub", icon: SiGithub },
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, color: "#ffffff" },
       { name: "VS Code" },
       { name: "Chrome DevTools" },
       { name: "Responsive Design" },
@@ -93,7 +93,7 @@ const Skills = () => {
                       key={skill.name}
                       className="px-3 py-1.5 text-sm bg-secondary rounded-md text-foreground flex items-center gap-2"
                     >
-                      {skill.icon && <skill.icon className="w-4 h-4 text-accent" />}
+                      {skill.icon && <skill.icon className="w-4 h-4" style={{ color: skill.color }} />}
                       {skill.name}
                     </span>
                   ))}
