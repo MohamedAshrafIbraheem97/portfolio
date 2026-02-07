@@ -12,7 +12,7 @@ const About = () => {
           </p>
           
           <p>
-            My primary focus is <span className="text-foreground font-medium">Angular</span> (versions 17–19), 
+            My primary focus is <span className="text-foreground font-medium">Angular</span> (latest versions), 
             where I work with standalone components, signals, and reactive patterns. 
             I've spent real time migrating legacy codebases, replacing heavy UI libraries 
             with custom Tailwind systems, and building feature-based architectures that scale.
