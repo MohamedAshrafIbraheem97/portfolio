@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, Phone } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
@@ -71,6 +71,15 @@ const Hero = () => {
           >
             <Mail className="w-4 h-4" />
             Get in Touch
+          </a>
+          <a
+            href="https://wa.me/201114185027"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-secondary text-foreground hover:bg-secondary/80 transition-colors font-medium text-sm"
+          >
+            <Phone className="w-4 h-4" />
+            WhatsApp
           </a>
         </div>
 
