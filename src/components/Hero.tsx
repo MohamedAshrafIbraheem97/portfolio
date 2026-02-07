@@ -1,21 +1,39 @@
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center relative px-4 pt-20 pb-12">
       <div className="container max-w-3xl">
-        <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-          <p className="font-mono text-accent text-sm mb-4">
-            Frontend Engineer
-          </p>
+        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mb-8">
+          <div 
+            className="animate-fade-in flex-shrink-0"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <Avatar className="w-24 h-24 md:w-32 md:h-32 border-2 border-accent/20">
+              <AvatarImage 
+                src="https://github.com/MohamedAshrafIbraheem97.png" 
+                alt="Mohamed Ashraf Ibraheem"
+              />
+              <AvatarFallback className="text-2xl font-semibold bg-secondary">MA</AvatarFallback>
+            </Avatar>
+          </div>
+          
+          <div className="flex-1">
+            <div className="animate-fade-in" style={{ animationDelay: "0.15s" }}>
+              <p className="font-mono text-accent text-sm mb-2">
+                Frontend Engineer
+              </p>
+            </div>
+            
+            <h1 
+              className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
+              Mohamed Ashraf Ibraheem
+            </h1>
+          </div>
         </div>
-        
-        <h1 
-          className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 animate-fade-in"
-          style={{ animationDelay: "0.2s" }}
-        >
-          Mohamed Ashraf Ibraheem
-        </h1>
         
         <p 
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed animate-fade-in"
@@ -48,7 +66,7 @@ const Hero = () => {
             LinkedIn
           </a>
           <a
-            href="mailto:mohamedashrafibraheem@gmail.com"
+            href="mailto:mohamedAshrafIbraheem@gmail.com"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent text-accent-foreground hover:bg-accent/90 transition-colors font-medium text-sm"
           >
             <Mail className="w-4 h-4" />
